@@ -1,0 +1,23 @@
+
+<div class="login-container" style="position:absolute;height:80%;width:100%;background-image:url('<%= image_path('login_background.png') %>');background-position:center;background-color:#f2f2f9;background-repeat:no-repeat">
+  <div><%= image_tag("login_image.png",style:"position:absolute;margin-left:50px;") %></div>
+  <div id="login-box" style="position:absolute;background-color:white;right:0%;margin-right:100px;">
+    <p style="font-size:22px;color:#515771;text-align:center;margin-top:0px;">用户登录</p>
+    <% flash.each do |message| %>
+        <div class="alert"><%= message[1] %></div>
+      <% end %>
+    <%= form_for(:session, url: login_path) do |f|  %>
+     <%= f.text_field :username, placeholder: "请输入用户名: "  %><br />
+     <%= f.password_field :password, placeholder: "请输入密码" %><br />
+
+     <div style="display:inline;padding-bottom:10px;">
+       <%= f.check_box :remember, class:"check" %><span class="small">记住用户名</span>
+       <%= link_to  "忘记密码？", root_path, class:"small", style:"float:right;text-decoration:none;"%>
+     </div>
+     <div class="container" style="margin-top:10px;">
+       <button class="login-button" style="float:right">证书登录</button>
+       <%= f.submit "登录", class: "login-button" %>
+     </div>
+    <% end %>
+  </div>
+</div>

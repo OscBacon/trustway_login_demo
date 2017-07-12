@@ -1,0 +1,66 @@
+// Place all the styles related to the Sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$light-grey : #dad7e4;
+$jade : #4be0c8;
+
+.login-button, input {
+  box-shadow: 0px 0 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+.login-button {
+  background-color: $jade;
+  color:white;
+  font-size:16px;
+  text-align:center;
+  width:140px;
+  height:40px;
+  border:none;
+  margin:0px;
+
+}
+
+#login-box {
+  padding: 30px 40px 40px 40px;
+  width:290px;
+  box-shadow: 0px 0px 15px 5px $light-grey;
+}
+
+.small {
+  color: $light-grey;
+}
+
+form > input {
+  height:40px;
+  border: 1px #f2f6fc;
+  width: 100%;
+  margin: 10px 0 10px 0;
+}
+
+form > input {
+  padding-left:10px;
+}
+
+form > input::placeholder {
+  @extend .small;
+}
+
+form > input:focus {
+  box-shadow: 0px 0 3px 1px transparentize($jade, 0.25);
+  outline:none;
+}
+
+.login-container > div {
+  padding:40px;
+}
+
+input[type=checkbox]
+.check {
+  background: #fff;
+  border:1px $light-grey;
+}
+
+.alert {
+  color: #ffb660;
+  float:right;
+}

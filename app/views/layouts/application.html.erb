@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TrustwayLoginDemo</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <!-- <div>
+      <%= image_tag('top.jpg')  %>
+    </div> -->
+    <div id="titlebar" class="bar">
+      <%= image_tag("logo.png") %>
+      重点车辆驾驶人单位管理系统（企业版）
+    </div>
+
+    <%= yield %>
+    <div id="bottombar" class="bar">
+      <p>
+        版权所有：杭州诚道科技股份有限公司
+      </p>
+    </div>
+  </body>
+</html>
