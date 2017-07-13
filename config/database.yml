@@ -10,10 +10,6 @@ default: &default
   timeout: 5000
   username: postgres
   password: pass
-  #username: ITS6H_JCBK
-  #password: ITS6H_JCBK
-  #server: 192.168.10.19:1521/znjttest
-  #database: NORMAL
 
 development:
   <<: *default

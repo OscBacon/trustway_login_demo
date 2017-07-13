@@ -2,23 +2,27 @@
 <div class="login-container" style="position:absolute;height:80%;width:100%;">
   <div><%= image_tag("login_image.png",style:"position:absolute;",id:"image") %></div>
   <div id="login-box" style="position:absolute;background-color:white;">
-    <p style="font-size:22px;color:#515771;text-align:center;margin-top:0px;">用户登录</p>
-    <% flash.each do |message| %>
-        <div class="alert"><%= message[1] %></div>
-      <% end %>
-    <%= form_for(:session, url: login_path) do |f|  %>
-     <%= f.text_field :username, placeholder: "请输入用户名:" %><br />
-     <%= f.password_field :password, placeholder: "请输入密码" %><br />
+    <div id="login-title">
+      <p style="font-size:22px;color:#515771;text-align:center;margin:0;">用户登录</p>
+    </div>
+    <div id="login-main">
+      <% flash.each do |message| %>
+          <div class="alert"><%= message[1] %></div>
+        <% end %>
+      <%= form_for(:session, url: login_path) do |f|  %>
+       <%= f.text_field :username, placeholder: "请输入用户名:", class:"login-field" %><br />
+       <%= f.password_field :password, placeholder: "请输入密码", class:"login-field" %><br />
 
-     <div style="display:inline;padding-bottom:10px;">
-       <%= f.check_box :remember, class:"check" %><span class="small" style="color:#dad7e4;">记住用户名</span>
-       <%= link_to  "忘记密码？", root_path, class:"small", style:"float:right;text-decoration:none;color:#dad7e4;" %>
-     </div>
-     <div class="container" style="margin-top:10px;">
-       <button class="login-button" style="float:right">证书登录</button>
-       <%= f.submit "登录", class: "login-button" %>
-     </div>
-    <% end %>
+       <div style="margin: 5px 0px 20px 0px;">
+         <%= f.check_box :remember, class:"check" %>
+         <%= link_to  "忘记密码？", root_path, class:"small", style:"float:right;text-decoration:none;color:#dad7e4;" %>
+       </div>
+       <div class="container" style="margin-top:10px;">
+         <button class="login-button" style="float:right">证书登录</button>
+         <%= f.submit "登录", class: "login-button" %>
+       </div>
+      <% end %>
+    </div>
   </div>
 </div>
 
