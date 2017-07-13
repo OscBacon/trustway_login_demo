@@ -10,6 +10,10 @@ $margin : 10%;
   filter: drop-shadow(0px 0px 10px #dad7e4);
 }
 
+.small {
+  color: $light-grey;
+}
+
 .login-button, input {
   box-shadow: 0px 0 3px 1px rgba(0, 0, 0, 0.2);
 }
@@ -30,17 +34,13 @@ $margin : 10%;
   @extend %shadow;
   padding: 30px 40px 40px 40px;
   width:290px;
-  /*box-shadow: 0px 0px 15px 5px $light-grey;*/
+  box-shadow: 0px 0px 15px 5px $light-grey \9;
   margin-right: $margin;
 }
 
 #image {
   @extend %shadow;
   margin-left: $margin;
-}
-
-.small {
-  color: $light-grey;
 }
 
 form > input {
@@ -54,13 +54,16 @@ form > input {
   padding-left:10px;
 }
 
-form > input::placeholder {
+input::placeholder {
   @extend .small;
 }
-
 form > input:focus {
   box-shadow: 0px 0 3px 1px transparentize($jade, 0.25);
   outline:none;
+}
+
+form > input {
+  color: #666666;
 }
 
 .login-container > div {
