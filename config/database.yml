@@ -8,22 +8,24 @@ default: &default
   adapter: postgresql
   pool: 50
   timeout: 5000
-  username: ITS6H_JCBK
-  password: ITS6H_JCBK
-  server: 192.168.10.19:1521/znjttest
-  database: NORMAL
+  username: postgres
+  password: pass
+  #username: ITS6H_JCBK
+  #password: ITS6H_JCBK
+  #server: 192.168.10.19:1521/znjttest
+  #database: NORMAL
 
 development:
   <<: *default
-  #database: db/development_tw
+  database: db/development_tw
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  # database: db/test_tw
+  database: db/test_tw
 
 production:
   <<: *default
-  # database: db/production_tw
+  database: db/production_tw
