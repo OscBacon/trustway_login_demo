@@ -27,7 +27,11 @@ $margin : 10%;
   height:40px;
   border:none;
   margin:0px;
+  cursor: pointer;
+}
 
+.login-button:hover{
+  background-color: lighten($jade, 10);
 }
 
 #login-box {
