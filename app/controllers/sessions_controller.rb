@@ -10,7 +10,9 @@ class SessionsController < ApplicationController
         log_in user
         redirect_to user_path(user)
       else
+        puts "login error"
         flash.now[:alert] = "用户名或密码错误！"
+        render 'new'
       end
     else
       puts "user already logged in"

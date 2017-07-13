@@ -1,7 +1,7 @@
 
 <div class="login-container" style="position:absolute;height:80%;width:100%;background-image:url('<%= image_path('login_background.png') %>');background-position:center;background-color:#f2f2f9;background-repeat:no-repeat">
   <div><%= image_tag("login_image.png",style:"position:absolute;",id:"image") %></div>
-  <div id="login-box" style="position:absolute;background-color:white;right:0%;">
+  <div id="login-box" style="position:absolute;background-color:white;>
     <p style="font-size:22px;color:#515771;text-align:center;margin-top:0px;">用户登录</p>
     <% flash.each do |message| %>
         <div class="alert"><%= message[1] %></div>
@@ -21,3 +21,12 @@
     <% end %>
   </div>
 </div>
+
+<!--<script>
+  $(function() {
+    var wid = $(window).width();
+    $('#login-box').css('margin-left',wid*(200/1400));
+  windows.onResizeShow();
+  })
+
+</script>-->
