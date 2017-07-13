@@ -5,6 +5,11 @@ $light-grey : #dad7e4;
 $jade : #4be0c8;
 $margin : 10%;
 
+%shadow {
+  -webkit-filter: drop-shadow(0px 0px 10px #dad7e4);
+  filter: drop-shadow(0px 0px 10px #dad7e4);
+}
+
 .login-button, input {
   box-shadow: 0px 0 3px 1px rgba(0, 0, 0, 0.2);
 }
@@ -22,13 +27,15 @@ $margin : 10%;
 }
 
 #login-box {
+  @extend %shadow;
   padding: 30px 40px 40px 40px;
   width:290px;
-  box-shadow: 0px 0px 15px 5px $light-grey;
+  /*box-shadow: 0px 0px 15px 5px $light-grey;*/
   margin-right: $margin;
 }
 
 #image {
+  @extend %shadow;
   margin-left: $margin;
 }
 
