@@ -22,12 +22,17 @@ body {
   margin:0px;
 }
 
+#titlebar-container {
+  background-color: #FFF;
+  width:100%;
+}
 #titlebar {
-  margin-left:150px;
+  position: relative;
+  margin-left:-600px;
+  left:50%;
   padding: 20px;
   font-size:26px;
   color:#535870;
-  background-color: #FFF;
 }
 
 #bottombar {
