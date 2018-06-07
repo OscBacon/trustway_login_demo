@@ -1,24 +1,8 @@
-# README
+# Login Demo
+This login demo was built during my internship at Trustway. It is based on a mockup that was given to me.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![login screen](app/assets/images/login.PNG)
 
-Things you may want to cover:
+This application uses Ruby on Rails. It initially connected to the company's Oracle Database, but for the purpose of demonstration, it connects here to a PostgreSQL database, with mock usernames and passwords.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Live demo: https://tw-login-demo.herokuapp.com/
